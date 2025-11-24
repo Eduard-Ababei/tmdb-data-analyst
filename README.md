@@ -68,7 +68,7 @@ It is designed as a portfolio-quality project aligned with industry expectations
 
 ## 4. Repository Structure
 
-´´´
+```
 tmdb-data-analyst/
 ├─ src/
 │ ├─ etl/
@@ -108,7 +108,7 @@ tmdb-data-analyst/
 ├─ .env.example
 ├─ requirements.txt
 └─ README.md
-´´´
+```
 
 
 ---
