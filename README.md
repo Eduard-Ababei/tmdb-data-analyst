@@ -70,44 +70,54 @@ It is designed as a portfolio-quality project aligned with industry expectations
 
 ```
 tmdb-data-analyst/
-├─ src/
-│ ├─ etl/
-│ │ ├─ extract_tmdb.py
-│ │ ├─ transform.py
-│ │ ├─ load.py
-│ │ ├─ utils_api.py
-│ │ └─ utils_db.py
-│ │
-│ ├─ analytics/
-│ │ ├─ product_metrics.py
-│ │ ├─ sql_queries.sql
-│ │ └─ helpers.py
-│ │
-│ ├─ ml/
-│ │ ├─ feature_engineering.py
-│ │ └─ model_train.py
-│ │
-│ ├─ notebooks/
-│ │ ├─ 01_exploration.ipynb
-│ │ ├─ 02_product_metrics.ipynb
-│ │ └─ 03_modeling.ipynb
-│ │
-│ └─ config/
-│ ├─ settings.py
-│ └─ schema.sql
+│   .env
+│   .env.example
+│   .gitignore
+│   PROJECT_CONTEXT.md
+│   PROJECT_CONTEXT.txt
+│   README.md
+│   requirements.txt
 │
-├─ data/
-│ ├─ raw/
-│ ├─ processed/
-│ └─ clean/
+├───credentials/
+│       service_account.json
 │
-├─ dashboards/
-│ ├─ powerbi/
-│ └─ tableau/
+├───data/
+│   ├───raw/
+│   ├───processed/
+│   └───clean/
 │
-├─ .env.example
-├─ requirements.txt
-└─ README.md
+└───src/
+    ├───analytics/
+    │       helpers.py
+    │       product_metrics.py
+    │       sql_queries.sql
+    │
+    ├───cloud/
+    │       bigquery_load.py
+    │       bigquery_queries.sql
+    │
+    ├───config/
+    │       create_schema.py
+    │       schema.sql
+    │       settings.py
+    │
+    ├───etl/
+    │       extract_tmdb.py
+    │       load.py
+    │       test_tmdb.py
+    │       transform.py
+    │       utils_api.py
+    │       utils_db.py
+    │
+    ├───ml/
+    │       feature_engineering.py
+    │       model_train.py
+    │
+    └───notebooks/
+            01_exploration.ipynb
+            02_product_metrics.ipynb
+            03_modeling.ipynb
+
 ```
 
 

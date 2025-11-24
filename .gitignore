@@ -1,0 +1,101 @@
+# ============================
+# PYTHON BASICS
+# ============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Builds
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+
+# ============================
+# CONFIGURATION & SECRETS
+# ============================
+.env
+.env.*
+credentials/
+*.key
+*.pem
+*.p12
+*.json      # cuidado: ignora todos los JSON, incluimos excepción luego
+!credentials/            # permitimos carpeta
+!credentials/.gitkeep    # dejamos marcador si hace falta
+
+# IMPORTANT: evitar subir service_account.json accidentalmente
+credentials/service_account.json
+
+# ============================
+# NOTEBOOKS
+# ============================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================
+# DATA LAYERS
+# ============================
+# Raw and processed data SHOULD NEVER be uploaded
+data/raw/*
+data/processed/*
+data/clean/*
+data/tmp/*
+data/cache/*
+
+# Allow placeholder markers
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/clean/.gitkeep
+
+# ============================
+# CACHE & TEMP FILES
+# ============================
+.cache/
+.spark/
+.dask-worker-space/
+joblib/
+tmp/
+temp/
+
+# ============================
+# EDITORS & SYSTEM FILES
+# ============================
+.vscode/
+.idea/
+*.sublime*
+.DS_Store
+Thumbs.db
+
+# ============================
+# EXPORTS / REPORTS / OUTPUTS
+# ============================
+exports/
+reports/
+outputs/
+figures/
+*.csv
+*.json
+*.parquet
+*.xlsx
+*.pdf
+*.png
+*.svg
+*.jpg
+
+# ============================
+# PROJECT CONTEXT (PERSONAL FILES)
+# ============================
+PROJECT_CONTEXT.md
+PROJECT_CONTEXT.txt
+PROJECT_CONTEXT_UPDATED.md
+PROJECT_CONTEXT_UPDATED.txt
