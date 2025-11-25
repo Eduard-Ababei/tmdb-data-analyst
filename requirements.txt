@@ -1,13 +1,37 @@
+# ====================================
+# Core Data Science & Analytics
+# ====================================
 pandas
-requests
-sqlalchemy
+numpy
 scikit-learn
-python-dotenv
-jupyter
 matplotlib
 seaborn
+
+# ====================================
+# API & ETL
+# ====================================
+requests
+python-dotenv
+
+# ====================================
+# Database (PostgreSQL + SQLAlchemy)
+# ====================================
+sqlalchemy
 psycopg2-binary
+
+# ====================================
+# Google Cloud (BigQuery)
+# (versions pinned to avoid auth conflicts)
+# ====================================
 google-cloud-bigquery
-google-auth
-google-auth-oauthlib
+google-cloud-bigquery-storage
+google-auth<2.42.0
+google-auth-oauthlib>=1.2.0
 google-auth-httplib2
+db-dtypes
+pyarrow
+
+# ====================================
+# Notebooks
+# ====================================
+jupyter
