@@ -19,7 +19,9 @@ CLEAN_PATH = BASE_PATH / "data" / "clean"
 TABLES = {
     "movies": CLEAN_PATH / "movies.csv",
     "genres": CLEAN_PATH / "genres.csv",
-    "movie_genres": CLEAN_PATH / "movie_genres.csv"
+    "movie_genres": CLEAN_PATH / "movie_genres.csv",
+    "cast": CLEAN_PATH / "cast.csv",
+    "crew": CLEAN_PATH / "crew.csv"
 }
 
 # ============================================
