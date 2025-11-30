@@ -111,51 +111,61 @@ Found in `03_modeling.ipynb` and `src/ml/`:
 
 ```
 tmdb-data-analyst/
+│
 │ .env
 │ .env.example
 │ .gitignore
-│ project_tree.txt
+│ PROJECT_CONTEXT.txt
 │ README.md
+│ requirements.txt
 │ setup.ps1
 │
 ├── credentials/
-│ service_account.json
+│       service_account.json        # (gitignored)
 │
 ├── data/
-│ ├── raw/
-│ ├── processed/
-│ └── clean/
+│   ├── raw/                       # Raw TMDB API responses
+│   ├── processed/                 # Intermediate cleaned/normalized data
+│   └── clean/                     # Final datasets ready for DB & BigQuery
+│
+├── dashboards/
+│   └── powerbi/
+│       ├── tmdb_dashboard.pbix    # Power BI dashboard
+│       ├── tmdb_dashboard.pdf     # Export for recruiters
+│       ├── preview.png            # Dashboard preview
+│       └── README.md              # Documentation of BI module
 │
 └── src/
-├── analytics/
-│ helpers.py
-│ product_metrics.py
-│ sql_queries.sql
-│
-├── cloud/
-│ bigquery_load.py
-│ 
-├── config/
-│ create_schema.py
-│ settings.py
-│
-├── etl/
-│ extract_tmdb.py
-│ fetch_genres.py
-│ load_tmdb.py
-│ test_tmdb.py
-│ transform_tmdb.py
-│ utils_api.py
-│ utils_db.py
-│
-├── ml/
-│ feature_engineering.py
-│ model_train.py
-│
-└── notebooks/
-01_exploration.ipynb
-02_product_metrics.ipynb
-03_modeling.ipynb
+    ├── analytics/                 # Product metrics & SQL analysis
+    │     helpers.py
+    │     product_metrics.py
+    │     sql_queries.sql
+    │
+    ├── cloud/                     # BigQuery integration logic
+    │     bigquery_load.py
+    │
+    ├── config/                    # Settings + schema management
+    │     create_schema.py
+    │     settings.py
+    │
+    ├── etl/                       # Full ETL pipeline for TMDB
+    │     extract_tmdb.py
+    │     fetch_genres.py
+    │     load_tmdb.py
+    │     test_tmdb.py
+    │     transform_tmdb.py
+    │     utils_api.py
+    │     utils_db.py
+    │
+    ├── ml/                        # Machine Learning pipeline
+    │     feature_engineering.py
+    │     model_train.py
+    │
+    └── notebooks/                 # Jupyter notebooks for analysis
+          01_exploration.ipynb
+          02_product_metrics.ipynb
+          03_modeling.ipynb
+
 
 ```
 
